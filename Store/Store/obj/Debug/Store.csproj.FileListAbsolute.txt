@@ -1,0 +1,13 @@
+C:\Users\yuhengchen\Desktop\DataBase_project\Store\Store\bin\Debug\Store.exe.config
+C:\Users\yuhengchen\Desktop\DataBase_project\Store\Store\bin\Debug\Store.exe
+C:\Users\yuhengchen\Desktop\DataBase_project\Store\Store\bin\Debug\Store.pdb
+C:\Users\yuhengchen\Desktop\DataBase_project\Store\Store\obj\Debug\Store.csproj.AssemblyReference.cache
+C:\Users\yuhengchen\Desktop\DataBase_project\Store\Store\obj\Debug\Store.csproj.SuggestedBindingRedirects.cache
+C:\Users\yuhengchen\Desktop\DataBase_project\Store\Store\obj\Debug\Store.goods.resources
+C:\Users\yuhengchen\Desktop\DataBase_project\Store\Store\obj\Debug\Store.Login.resources
+C:\Users\yuhengchen\Desktop\DataBase_project\Store\Store\obj\Debug\Store.Splash.resources
+C:\Users\yuhengchen\Desktop\DataBase_project\Store\Store\obj\Debug\Store.Properties.Resources.resources
+C:\Users\yuhengchen\Desktop\DataBase_project\Store\Store\obj\Debug\Store.csproj.GenerateResource.cache
+C:\Users\yuhengchen\Desktop\DataBase_project\Store\Store\obj\Debug\Store.csproj.CoreCompileInputs.cache
+C:\Users\yuhengchen\Desktop\DataBase_project\Store\Store\obj\Debug\Store.exe
+C:\Users\yuhengchen\Desktop\DataBase_project\Store\Store\obj\Debug\Store.pdb
