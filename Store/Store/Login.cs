@@ -70,7 +70,7 @@ namespace Store
             }
             else
             {
-                MessageBox.Show("用户名或密码错误！");
+                MessageBox.Show("账号或密码错误！");
             }
             con.Close();
         }
