@@ -30,6 +30,20 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.usergender = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.usercity = new System.Windows.Forms.TextBox();
+            this.usertele = new System.Windows.Forms.TextBox();
+            this.useremail = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.newpsword = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.userpsword = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,26 +68,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.userid = new System.Windows.Forms.TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.usergender = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.usercity = new System.Windows.Forms.TextBox();
-            this.usertele = new System.Windows.Forms.TextBox();
-            this.useremail = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.username = new System.Windows.Forms.TextBox();
-            this.newpsword = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.userpsword = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -88,8 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -105,6 +102,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.pictureBox4);
@@ -117,6 +115,144 @@
             this.panel2.Size = new System.Drawing.Size(896, 763);
             this.panel2.TabIndex = 9;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Plum;
+            this.panel10.Controls.Add(this.usergender);
+            this.panel10.Controls.Add(this.label18);
+            this.panel10.Controls.Add(this.usercity);
+            this.panel10.Controls.Add(this.usertele);
+            this.panel10.Controls.Add(this.useremail);
+            this.panel10.Controls.Add(this.label17);
+            this.panel10.Controls.Add(this.label16);
+            this.panel10.Controls.Add(this.label15);
+            this.panel10.Location = new System.Drawing.Point(51, 287);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(786, 263);
+            this.panel10.TabIndex = 26;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
+            // 
+            // usergender
+            // 
+            this.usergender.Font = new System.Drawing.Font("微软雅黑", 14F);
+            this.usergender.Location = new System.Drawing.Point(552, 156);
+            this.usergender.Name = "usergender";
+            this.usergender.Size = new System.Drawing.Size(142, 32);
+            this.usergender.TabIndex = 34;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label18.Location = new System.Drawing.Point(459, 160);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(50, 25);
+            this.label18.TabIndex = 33;
+            this.label18.Text = "性别";
+            // 
+            // usercity
+            // 
+            this.usercity.Font = new System.Drawing.Font("微软雅黑", 14F);
+            this.usercity.Location = new System.Drawing.Point(153, 153);
+            this.usercity.Name = "usercity";
+            this.usercity.Size = new System.Drawing.Size(142, 32);
+            this.usercity.TabIndex = 32;
+            // 
+            // usertele
+            // 
+            this.usertele.Font = new System.Drawing.Font("微软雅黑", 14F);
+            this.usertele.Location = new System.Drawing.Point(153, 53);
+            this.usertele.Name = "usertele";
+            this.usertele.Size = new System.Drawing.Size(142, 32);
+            this.usertele.TabIndex = 31;
+            // 
+            // useremail
+            // 
+            this.useremail.Font = new System.Drawing.Font("微软雅黑", 14F);
+            this.useremail.Location = new System.Drawing.Point(552, 49);
+            this.useremail.Name = "useremail";
+            this.useremail.Size = new System.Drawing.Size(142, 32);
+            this.useremail.TabIndex = 30;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label17.Location = new System.Drawing.Point(42, 160);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(88, 25);
+            this.label17.TabIndex = 29;
+            this.label17.Text = "所在城市";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label16.Location = new System.Drawing.Point(42, 56);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(88, 25);
+            this.label16.TabIndex = 28;
+            this.label16.Text = "联系电话";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label15.Location = new System.Drawing.Point(459, 52);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(50, 25);
+            this.label15.TabIndex = 27;
+            this.label15.Text = "邮箱";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(459, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 25);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "新密码";
+            // 
+            // newpsword
+            // 
+            this.newpsword.Font = new System.Drawing.Font("微软雅黑", 14F);
+            this.newpsword.Location = new System.Drawing.Point(552, 45);
+            this.newpsword.Name = "newpsword";
+            this.newpsword.Size = new System.Drawing.Size(142, 32);
+            this.newpsword.TabIndex = 23;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Pink;
+            this.panel9.Controls.Add(this.userpsword);
+            this.panel9.Controls.Add(this.label5);
+            this.panel9.Controls.Add(this.newpsword);
+            this.panel9.Controls.Add(this.label3);
+            this.panel9.Location = new System.Drawing.Point(51, 155);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(786, 114);
+            this.panel9.TabIndex = 25;
+            // 
+            // userpsword
+            // 
+            this.userpsword.Font = new System.Drawing.Font("微软雅黑", 14F);
+            this.userpsword.Location = new System.Drawing.Point(153, 45);
+            this.userpsword.Name = "userpsword";
+            this.userpsword.Size = new System.Drawing.Size(142, 32);
+            this.userpsword.TabIndex = 31;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label5.Location = new System.Drawing.Point(61, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 25);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "现密码";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBox4
             // 
@@ -155,7 +291,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("微软雅黑", 15F);
             this.button1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.button1.Location = new System.Drawing.Point(603, 576);
+            this.button1.Location = new System.Drawing.Point(603, 606);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 45);
             this.button1.TabIndex = 11;
@@ -376,184 +512,17 @@
             this.label9.TabIndex = 7;
             this.label9.Text = "悠然小店";
             // 
-            // label4
+            // button2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(57, 45);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 25);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "账号";
-            // 
-            // userid
-            // 
-            this.userid.Font = new System.Drawing.Font("微软雅黑", 14F);
-            this.userid.Location = new System.Drawing.Point(130, 42);
-            this.userid.Name = "userid";
-            this.userid.Size = new System.Drawing.Size(142, 32);
-            this.userid.TabIndex = 24;
-            this.userid.TextChanged += new System.EventHandler(this.userid_TextChanged);
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Pink;
-            this.panel9.Controls.Add(this.userpsword);
-            this.panel9.Controls.Add(this.label5);
-            this.panel9.Controls.Add(this.label4);
-            this.panel9.Controls.Add(this.userid);
-            this.panel9.Location = new System.Drawing.Point(51, 155);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(786, 114);
-            this.panel9.TabIndex = 25;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Plum;
-            this.panel10.Controls.Add(this.usergender);
-            this.panel10.Controls.Add(this.label18);
-            this.panel10.Controls.Add(this.usercity);
-            this.panel10.Controls.Add(this.usertele);
-            this.panel10.Controls.Add(this.useremail);
-            this.panel10.Controls.Add(this.label17);
-            this.panel10.Controls.Add(this.label16);
-            this.panel10.Controls.Add(this.label15);
-            this.panel10.Controls.Add(this.label3);
-            this.panel10.Controls.Add(this.label2);
-            this.panel10.Controls.Add(this.username);
-            this.panel10.Controls.Add(this.newpsword);
-            this.panel10.Location = new System.Drawing.Point(51, 287);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(786, 263);
-            this.panel10.TabIndex = 26;
-            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
-            // 
-            // usergender
-            // 
-            this.usergender.Font = new System.Drawing.Font("微软雅黑", 14F);
-            this.usergender.Location = new System.Drawing.Point(552, 185);
-            this.usergender.Name = "usergender";
-            this.usergender.Size = new System.Drawing.Size(142, 32);
-            this.usergender.TabIndex = 34;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label18.Location = new System.Drawing.Point(459, 189);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(50, 25);
-            this.label18.TabIndex = 33;
-            this.label18.Text = "性别";
-            // 
-            // usercity
-            // 
-            this.usercity.Font = new System.Drawing.Font("微软雅黑", 14F);
-            this.usercity.Location = new System.Drawing.Point(130, 186);
-            this.usercity.Name = "usercity";
-            this.usercity.Size = new System.Drawing.Size(142, 32);
-            this.usercity.TabIndex = 32;
-            // 
-            // usertele
-            // 
-            this.usertele.Font = new System.Drawing.Font("微软雅黑", 14F);
-            this.usertele.Location = new System.Drawing.Point(552, 115);
-            this.usertele.Name = "usertele";
-            this.usertele.Size = new System.Drawing.Size(142, 32);
-            this.usertele.TabIndex = 31;
-            // 
-            // useremail
-            // 
-            this.useremail.Font = new System.Drawing.Font("微软雅黑", 14F);
-            this.useremail.Location = new System.Drawing.Point(552, 34);
-            this.useremail.Name = "useremail";
-            this.useremail.Size = new System.Drawing.Size(142, 32);
-            this.useremail.TabIndex = 30;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label17.Location = new System.Drawing.Point(19, 193);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(88, 25);
-            this.label17.TabIndex = 29;
-            this.label17.Text = "所在城市";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label16.Location = new System.Drawing.Point(421, 115);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(88, 25);
-            this.label16.TabIndex = 28;
-            this.label16.Text = "联系电话";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.Location = new System.Drawing.Point(459, 37);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(50, 25);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "邮箱";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(38, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 25);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "新密码";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(38, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 25);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "用户名";
-            // 
-            // username
-            // 
-            this.username.Font = new System.Drawing.Font("微软雅黑", 14F);
-            this.username.Location = new System.Drawing.Point(130, 37);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(142, 32);
-            this.username.TabIndex = 24;
-            // 
-            // newpsword
-            // 
-            this.newpsword.Font = new System.Drawing.Font("微软雅黑", 14F);
-            this.newpsword.Location = new System.Drawing.Point(130, 105);
-            this.newpsword.Name = "newpsword";
-            this.newpsword.Size = new System.Drawing.Size(142, 32);
-            this.newpsword.TabIndex = 23;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(459, 45);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 25);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "密码";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // userpsword
-            // 
-            this.userpsword.Font = new System.Drawing.Font("微软雅黑", 14F);
-            this.userpsword.Location = new System.Drawing.Point(552, 45);
-            this.userpsword.Name = "userpsword";
-            this.userpsword.Size = new System.Drawing.Size(142, 32);
-            this.userpsword.TabIndex = 31;
+            this.button2.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.button2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.button2.Location = new System.Drawing.Point(204, 606);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(142, 45);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "修改密码";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // user
             // 
@@ -570,6 +539,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -590,10 +563,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -636,13 +605,10 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.TextBox newpsword;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox userid;
         private System.Windows.Forms.TextBox userpsword;
+        private System.Windows.Forms.Button button2;
     }
 }

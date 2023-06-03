@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Runtime.Remoting.Messaging;
 
 namespace Store
 {
@@ -18,8 +19,7 @@ namespace Store
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\yuhengchen\Documents\easystore.mdf;Integrated Security=True;Connect Timeout=30");
-
+        
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -57,22 +57,91 @@ namespace Store
 
         private void button1_Click(object sender, EventArgs e)
         {
-            con.Open();
-            string acc = id.Text; string psword = password.Text;
-            SqlDataAdapter sda = new SqlDataAdapter("select count(*) from CustomerInfo where 客户编号 = '"+acc+"' and 客户密码 = '"+psword+"'",con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
+            if(id.Text != "" && password.Text != "")
             {
-                goods obj = new goods();
-                obj.Show();
-                this.Hide();
+                loginfun(1);
             }
             else
             {
-                MessageBox.Show("账号或密码错误！");
+                MessageBox.Show("输入项有空!");
             }
-            con.Close();
+           
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void id_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public Boolean loginfun(int x)
+        {
+            if(x == 1)
+            {
+                Dao dao = new Dao();
+                //string sql = "select * from CustomerInfo where 客户编号 = '" + id.Text + "' and 客户密码 = '" + password.Text + "'";
+                string sql = $"select * from CustomerInfo where 客户编号 = '{id.Text}' and 客户密码 = '{password.Text}'";
+                //MessageBox.Show(sql);
+                IDataReader dc = dao.read(sql);
+                if(dc.Read())
+                {
+                    Data.UID = dc["客户编号"].ToString();
+                    Data.UNAME = dc["客户姓名"].ToString();
+                    this.Hide();
+                    goods obj = new goods();  
+                    obj.Show();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("登录失败");
+                }
+                dao.DaoClose();
+            }
+
+            if (x == 2)
+            {
+                Dao dao = new Dao();
+                //string sql = "select * from CustomerInfo where 客户编号 = '" + id.Text + "' and 客户密码 = '" + password.Text + "'";
+                string sql = $"select * from adminInfo where uid = '{id.Text}' and password = '{password.Text}'";
+                //MessageBox.Show(sql);
+                IDataReader dc = dao.read(sql);
+                if (dc.Read())
+                {
+                    this.Hide();
+                    goods obj = new goods();
+                    obj.Show();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("登录失败");
+                }
+                dao.DaoClose();
+            }
+
+            return true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (id.Text != "" && password.Text != "")
+            {
+                loginfun(2);
+            }
+            else
+            {
+                MessageBox.Show("输入项有空!");
+            }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

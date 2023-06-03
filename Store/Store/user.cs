@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Store
 {
@@ -18,9 +19,7 @@ namespace Store
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\yuhengchen\Documents\easystore.mdf;Integrated Security=True;Connect Timeout=30");
-
-
+      
         private void label15_Click(object sender, EventArgs e)
         {
 
@@ -68,38 +67,32 @@ namespace Store
 
         private void button1_Click(object sender, EventArgs e)
         {
-            con.Open();
-            string acc = userid.Text; string psword = userpsword.Text;
-            SqlDataAdapter sda = new SqlDataAdapter("select count(*) from CustomerInfo where 客户编号 = '" + acc + "' and 客户密码 = '" + psword + "'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Dao dao = new Dao();
+            string uid = Data.UID.ToString();
+           // string uname = $"{username.Text}";
+            string sql = $"select * from CustomerInfo where 客户编号 = 'uid' and 客户密码 = '{userpsword.Text}'";
+            //MessageBox.Show(sql);
+            IDataReader dc = dao.read(sql);
+            if (dc.Read())
             {
-                if (username.Text != "" && newpsword.Text != "" && usertele.Text != "" && usercity.Text != "")
-                {
-                    try
-                    {
-                        //string query = "insert into CustomerInfo values('" + userid.Text + "','" + username.Text + "','" + newpsword.Text + "','" + usergender.Text + "','" + usercity.Text + "','" + usertele.Text + "','" + useremail.Text + "')";
-                        string query = "update CustomerInfo set 客户姓名 = '" + username.Text + "', 客户密码 = '" + newpsword.Text + "' ,性别 = '" + usergender.Text + "',所在地址 = '" + usercity.Text + "',联系电话 = '" + usertele.Text + "',邮箱 = '" + useremail.Text + "'  where 客户编号 = '" + acc + "'";
-                        SqlCommand cmd = new SqlCommand(query, con);
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("保存成功！");
-                    }
-                    catch(Exception Ex)
-                    {
-                        MessageBox.Show(Ex.Message);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("信息缺失！");
-                }
+                Data.UID = dc["客户编号"].ToString();
+                //Data.UNAME = dc["客户姓名"].ToString();
+                //this.Hide();
+                //goods obj = new goods();
+                //obj.Show();
+                //this.Show();
+                MessageBox.Show("密码修改成功");
             }
             else
             {
-                MessageBox.Show("账号或密码错误！");
+                MessageBox.Show("密码修改失败");
             }
-            con.Close();
+            dao.DaoClose();
         }
     }
 }

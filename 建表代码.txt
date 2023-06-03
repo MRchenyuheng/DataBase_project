@@ -27,3 +27,9 @@ PRIMARY KEY(客户编号,商品编号),
 foreign key (客户编号) references CustomerInfo(客户编号),
 foreign key (商品编号) references GoodsInfo(商品编号),
 )
+
+
+Create Table adminInfo(
+uid char(6) Primary key,
+password varchar(20) NOT NULL,
+)
